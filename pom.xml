@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOING!
+[soi-toolkit.gen.version=0.6.2-SNAPSHOT]
+[soi-toolkit.gen.type=services]
+[soi-toolkit.gen.createDate=2014-10-30T15:10:19.862+01:00]
+[soi-toolkit.gen.artifactId=GetAggregatedActivity]
+-->
+<project
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.soitoolkit.commons.poms</groupId>
+        <artifactId>soitoolkit-default-parent</artifactId>
+        <version>0.6.2-SNAPSHOT</version>
+    </parent>
+
+    <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
+    <artifactId>GetAggregatedActivity-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>GetAggregatedActivity-parent</name>
+
+    <scm>
+        <connection>scm:svn:https://skltpservices.googlecode.com/svn/AggregatingServices/riv.clinicalprocess.activity.actions/GetAggregatedActivity/trunk</connection>
+        <developerConnection>scm:svn:https://skltpservices.googlecode.com/svn/AggregatingServices/riv.clinicalprocess.activity.actions/GetAggregatedActivity/trunk</developerConnection>
+        <url>https://skltpservices.googlecode.com/svn/AggregatingServices/riv.clinicalprocess.activity.actions/GetAggregatedActivity/trunk</url>
+    </scm>
+
+    <modules>
+      <module>GetAggregatedActivity</module>
+      <module>GetAggregatedActivity-teststub</module>
+
+      <module>GetAggregatedActivity-schemas</module>
+
+    </modules>
+
+		<build>
+			<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-release-plugin</artifactId>
+							<version>2.5.1</version>
+							<configuration>
+								<autoVersionSubmodules>true</autoVersionSubmodules>
+								<tagNameFormat>v@{project.version}</tagNameFormat>
+								<pushChanges>false</pushChanges>
+								<localCheckout>true</localCheckout>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+		</build>
+
+  </project>
