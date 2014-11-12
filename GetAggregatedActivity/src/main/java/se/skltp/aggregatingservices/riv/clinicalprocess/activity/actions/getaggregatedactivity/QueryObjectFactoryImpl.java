@@ -48,11 +48,4 @@ public class QueryObjectFactoryImpl implements QueryObjectFactory {
 		
 		return new QueryObject(fc, request);	
 	}
-	
-	protected String getSourceSystem(final GetActivityType request) {
-		if(request.getSourceSystemId() == null || StringUtils.isBlank(request.getSourceSystemId().getExtension())) {
-			return null;
-		}
-		return request.getSourceSystemId().getExtension();
-	}
 }
