@@ -31,7 +31,8 @@ public class QueryObjectFactoryImpl implements QueryObjectFactory {
 	 * 
 	 * 1. subjectOfCareId --> registeredResidentIdentification
 	 * 2. "riv:clinicalprocess:activity:actions" --> serviceDomain
-	 * 3. "caa-ga" --> categorization
+	 * 3. "caa-ga" --> categorization"
+	 * 4. "sourceSystemId.extension --> sourceSystem"
 	 */
 	public QueryObject createQueryObject(Node node) {
 		final GetActivityType request = (GetActivityType)ju.unmarshal(node);
@@ -45,7 +46,15 @@ public class QueryObjectFactoryImpl implements QueryObjectFactory {
 		}
 		fc.setServiceDomain(eiServiceDomain);
 		fc.setCategorization(eiCategorization);
+		fc.setSourceSystem(getSourceSystem(request));
 		
 		return new QueryObject(fc, request);	
+	}
+	
+	protected String getSourceSystem(final GetActivityType request) {
+		if(request.getSourceSystemId() == null || StringUtils.isBlank(request.getSourceSystemId().getExtension())) {
+			return null;
+		}
+		return request.getSourceSystemId().getExtension();
 	}
 }
