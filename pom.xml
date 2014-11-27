@@ -26,9 +26,10 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
     <name>GetAggregatedActivity-parent</name>
 
     <scm>
-        <connection>scm:svn:https://skltpservices.googlecode.com/svn/AggregatingServices/riv.clinicalprocess.activity.actions/GetAggregatedActivity/trunk</connection>
-        <developerConnection>scm:svn:https://skltpservices.googlecode.com/svn/AggregatingServices/riv.clinicalprocess.activity.actions/GetAggregatedActivity/trunk</developerConnection>
-        <url>https://skltpservices.googlecode.com/svn/AggregatingServices/riv.clinicalprocess.activity.actions/GetAggregatedActivity/trunk</url>
+        <url>https://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivity</url>
+				<connection>scm:git:git://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivity.git</connection>
+				<developerConnection>scm:git:git://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivity.git</developerConnection>
+				<tag>HEAD</tag>
     </scm>
 
     <modules>
