@@ -1,4 +1,4 @@
-package agp
+package activity
 
 import scala.concurrent.duration._
 import io.gatling.core.Predef._
@@ -12,7 +12,7 @@ import scenarios.GetAggregatedActivityPingForConfigurationScenario
 class TP01PingForConfiguration extends Simulation {
 
   // dev
-  val httpProtocol = http.baseURL("http://ine-dit-app02.sth.basefarm.net:9014/agp/getaggregatedactivity/itintegration/monitoring/PingForConfiguration/1/rivtabp21").disableResponseChunksDiscarding
+  val httpProtocol = http.baseURL("http://ine-dit-app02.sth.basefarm.net:9010/agp/getaggregatedactivity/itintegration/monitoring/PingForConfiguration/1/rivtabp21").disableResponseChunksDiscarding
 
   val pingForConfiguration = scenario("ping for configuration")
                  .repeat(2) {

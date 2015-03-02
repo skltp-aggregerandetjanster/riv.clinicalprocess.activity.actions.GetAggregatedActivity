@@ -1,4 +1,4 @@
-package agp
+package activity
 
 import scala.concurrent.duration._
 import io.gatling.core.Predef._
@@ -11,7 +11,7 @@ import scenarios.GetAggregatedActivityScenario
  */
 class TP04Robustness extends Simulation {
 
-  val baseURL                 = "https://qa.esb.ntjp.se/vp/clinicalprocess/activity/actions/GetActivity/3/rivtabp21"
+  val baseURL           = "https://qa.esb.ntjp.se/vp/clinicalprocess/activity/actions/GetActivity/1/rivtabp21"
 
   val testDuration            =  12 hours
   val numberOfConcurrentUsers =   5
