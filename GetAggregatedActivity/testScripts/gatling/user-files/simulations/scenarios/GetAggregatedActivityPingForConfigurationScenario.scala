@@ -16,7 +16,7 @@ object GetAggregatedActivityPingForConfigurationScenario {
         http("GetAggregatedActivityPingForConfiguration")
           .post("")
           .headers(headers)
-          .body(RawFileBody("GetReferralOutcomePingForConfiguration.xml"))
+          .body(RawFileBody("GetActivityPingForConfiguration.xml"))
           .check(status.is(200))
           .check(substring("Applikation"))
           .check(substring("GetAggregatedActivity"))
