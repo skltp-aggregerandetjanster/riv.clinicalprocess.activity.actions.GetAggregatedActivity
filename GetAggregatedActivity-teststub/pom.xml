@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT 
-	YOU ARE DOING! [soi-toolkit.gen.version=0.6.2-SNAPSHOT] [soi-toolkit.gen.type=services] 
+<!-- DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT
+	YOU ARE DOING! [soi-toolkit.gen.version=0.6.2-SNAPSHOT] [soi-toolkit.gen.type=services]
 	[soi-toolkit.gen.createDate=2014-10-30T15:10:20.693+01:00] [soi-toolkit.gen.artifactId=GetAggregatedActivity] -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
@@ -9,7 +9,7 @@
 	<parent>
 		<groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
 		<artifactId>GetAggregatedActivity-parent</artifactId>
-		<version>1.0.0-RC2-SNAPSHOT</version>
+		<version>1.0.0-RC2</version>
 	</parent>
 
 	<artifactId>GetAggregatedActivity-teststub</artifactId>
@@ -17,7 +17,7 @@
 	<name>GetAggregatedActivity-teststub</name>
 
 	<dependencies>
-		<!-- dependencies to the integration component that contains the services 
+		<!-- dependencies to the integration component that contains the services
 			to stub -->
 		<dependency>
 			<groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
@@ -49,7 +49,7 @@
 				<directory>${basedir}/src/main/resources</directory>
 			</resource>
 			<resource>
-				<!-- To get mule-config files from the Mule Studio defined resource-folder 
+				<!-- To get mule-config files from the Mule Studio defined resource-folder
 					in the classpath... -->
 				<directory>${basedir}/src/main/app</directory>
 			</resource>
@@ -70,7 +70,7 @@
 				<groupId>org.mule.tools</groupId>
 				<artifactId>maven-mule-plugin</artifactId>
 				<extensions>true</extensions>
-				<!-- Include mule-dependencies that doesn't come with Mule 3.x otherwise 
+				<!-- Include mule-dependencies that doesn't come with Mule 3.x otherwise
 					we can't install to a vanilla Mule 3.x installation -->
 				<configuration>
 					<inclusions>
@@ -103,7 +103,7 @@
 							<artifactId>junit</artifactId>
 						</exclusion>
 
-						<!-- servlet-api-2.5 is already included in MULE_HOME/lib/opt, see 
+						<!-- servlet-api-2.5 is already included in MULE_HOME/lib/opt, see
 							issue 283 -->
 						<exclusion>
 							<groupId>org.mortbay.jetty</groupId>
@@ -115,7 +115,7 @@
 							<groupId>org.safehaus.jug</groupId>
 							<artifactId>jug.osgi</artifactId>
 						</exclusion>
-						<!-- activemq needs to be added manually to MULE_HOME/lib/user if required, 
+						<!-- activemq needs to be added manually to MULE_HOME/lib/user if required,
 							see issue 283 -->
 						<exclusion>
 							<groupId>org.apache.activemq</groupId>
@@ -126,7 +126,7 @@
 							<artifactId>xbean-spring</artifactId>
 						</exclusion>
 
-						<!-- hornetq needs to be added manually to MULE_HOME/lib/user if required, 
+						<!-- hornetq needs to be added manually to MULE_HOME/lib/user if required,
 							see issue 283 -->
 						<exclusion>
 							<groupId>org.hornetq</groupId>
@@ -141,7 +141,7 @@
 							<artifactId>netty</artifactId>
 						</exclusion>
 
-						<!-- jtds (JDBC driver fpr Microsoft SQL Server) needs to be added 
+						<!-- jtds (JDBC driver fpr Microsoft SQL Server) needs to be added
 							manually to MULE_HOME/lib/user if required, see issue 283 -->
 						<exclusion>
 							<groupId>net.sourceforge.jtds</groupId>
@@ -158,8 +158,8 @@
 	<profiles>
 		<profile>
 			<id>muleServer</id>
-			<!-- Start mule server with the command "mvn -PmuleServer" or "mvn -PmuleServer 
-				-Dexec.args="${artifaceId}-config.xml"" if you want to override the default 
+			<!-- Start mule server with the command "mvn -PmuleServer" or "mvn -PmuleServer
+				-Dexec.args="${artifaceId}-config.xml"" if you want to override the default
 				config-file -->
 			<build>
 				<defaultGoal>test</defaultGoal>
