@@ -18,7 +18,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
 
     <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
     <artifactId>GetAggregatedActivity-parent</artifactId>
-    <version>1.0.0-RC2-SNAPSHOT</version>
+    <version>1.0.0-RC2</version>
     <packaging>pom</packaging>
     <name>GetAggregatedActivity-parent</name>
 
@@ -26,7 +26,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
         <url>https://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivity</url>
 				<connection>scm:git:git://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivity.git</connection>
 				<developerConnection>scm:git:git://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivity.git</developerConnection>
-				<tag>HEAD</tag>
+				<tag>v1.0.0-RC2</tag>
     </scm>
 
     <modules>
