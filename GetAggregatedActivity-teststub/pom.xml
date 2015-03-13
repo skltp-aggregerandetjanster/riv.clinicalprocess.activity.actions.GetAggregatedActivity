@@ -34,12 +34,12 @@
 		<dependency>
 			<groupId>se.skltp.agp</groupId>
 			<artifactId>agp-core</artifactId>
-			<version>1.2.1</version>
+			<version>1.2.3</version>
 		</dependency>
 		<dependency>
 			<groupId>se.skltp.agp</groupId>
 			<artifactId>agp-test-common</artifactId>
-			<version>1.2.1</version>
+			<version>1.2.3</version>
 		</dependency>
 	</dependencies>
 
