@@ -18,7 +18,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
 
     <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
     <artifactId>GetAggregatedActivity-parent</artifactId>
-    <version>1.0.0-RC2</version>
+    <version>1.0.0-RC3</version>
     <packaging>pom</packaging>
     <name>GetAggregatedActivity-parent</name>
 
@@ -32,9 +32,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
     <modules>
       <module>GetAggregatedActivity</module>
       <module>GetAggregatedActivity-teststub</module>
-
       <module>GetAggregatedActivity-schemas</module>
-
     </modules>
 
 		<build>
