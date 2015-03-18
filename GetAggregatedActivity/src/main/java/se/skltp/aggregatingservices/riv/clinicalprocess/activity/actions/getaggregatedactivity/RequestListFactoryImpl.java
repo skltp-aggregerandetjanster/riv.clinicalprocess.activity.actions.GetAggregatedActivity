@@ -25,22 +25,26 @@ public class RequestListFactoryImpl implements RequestListFactory {
 	private static final ThreadSafeSimpleDateFormat df = new ThreadSafeSimpleDateFormat("YYYYMMDDhhmmss");
 
 	/**
-	 * Filtrera svarsposter fr??n i EI (ei-engagement) baserat parametrar i GetActivity requestet (req).
-	 * F??ljande villkor m??ste vara sanna f??r att en svarspost fr??n EI skall tas med i svaret:
+	 * Filtrera svarsposter från i EI (ei-engagement) baserat parametrar i GetActivity requestet (req).
+	 * Följande villkor måste vara sanna för att en svarspost från EI skall tas med i svaret:
 	 * 
-	 * 2. req.careUnitId.size == 0 or req.careUnitId.contains(ei-engagement.logicalAddress)
+	 * req.careUnitId.size == 0 
+	 *   or 
+	 * req.careUnitId.contains(ei-engagement.logicalAddress)
 	 * 
-	 * Svarsposter fr??n EI som passerat filtreringen grupperas p?? f??ltet sourceSystem samt postens f??lt logicalAddress (= PDL-enhet) samlas i listan careUnitId per varje sourceSystem
+	 * Svarsposter från EI som passerat filtreringen grupperas på fältet sourceSystem 
+	 * samt postens fält logicalAddress (= PDL-enhet) samlas i listan careUnitId per varje sourceSystem
 	 * 
-	 * Ett anrop g??rs per funnet sourceSystem med f??ljande v??rden i anropet:
+	 * Ett anrop görs per funnet sourceSystem med följande värden i anropet:
 	 * 
 	 * 1. logicalAddress = sourceSystem (systemadressering)
 	 * 2. subjectOfCareId = orginal-request.subjectOfCareId
 	 */
 	public List<Object[]> createRequestList(QueryObject qo, FindContentResponseType src) {
+	    
 		final GetActivityType originalRequest = (GetActivityType)qo.getExtraArg();
 		String reqCareUnit = null;
-		if(originalRequest.getSourceSystemId() != null) {
+		if (originalRequest.getSourceSystemId() != null) {
 			reqCareUnit = originalRequest.getSourceSystemId().getExtension();
 		}
 		
@@ -59,26 +63,21 @@ public class RequestListFactoryImpl implements RequestListFactory {
 		}
 
 		// Prepare the result of the transformation as a list of request-payloads, 
-		// one payload for each unique logical-address (e.g. source system since we are using systemaddressing),
+		// one payload for each unique logical-address (e.g. source system since we are using system addressing),
 		// each payload built up as an object-array according to the JAX-WS signature for the method in the service interface
 		List<Object[]> reqList = new ArrayList<Object[]>();
 		
 		for (Entry<String, List<String>> entry : sourceSystem_pdlUnitList_map.entrySet()) {
 			final String sourceSystem = entry.getKey();
             final GetActivityType request = originalRequest;
-
             if (log.isInfoEnabled()) {
             	log.info("Calling source system using logical address {} for subject of care id {}", 
             			sourceSystem, originalRequest.getPatientId().getExtension());
             }		
-
 			Object[] reqArr = new Object[] {sourceSystem, request};
-			
 			reqList.add(reqArr);
 		}
-
 		log.debug("Transformed payload: {}", reqList);
-
 		return reqList;
 	}
 
@@ -116,11 +115,8 @@ public class RequestListFactoryImpl implements RequestListFactory {
 	}
 
 	boolean isPartOf(List<String> careUnitIdList, String careUnit) {
-		
 		log.debug("Check presence of {} in {}", careUnit, careUnitIdList);
-		
 		if (careUnitIdList == null || careUnitIdList.size() == 0) return true;
-		
 		return careUnitIdList.contains(careUnit);
 	}
 
