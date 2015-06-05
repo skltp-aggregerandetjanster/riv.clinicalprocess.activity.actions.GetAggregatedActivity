@@ -6,9 +6,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
 [soi-toolkit.gen.createDate=2014-10-30T15:10:19.862+01:00]
 [soi-toolkit.gen.artifactId=GetAggregatedActivities]
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
 
@@ -20,7 +18,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
 
   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
   <artifactId>GetAggregatedActivities-parent</artifactId>
-  <version>1.0.0-RC4-SNAPSHOT</version>
+  <version>1.0.0-RC4</version>
   <packaging>pom</packaging>
   <name>GetAggregatedActivities-parent</name>
 
@@ -28,7 +26,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
     <url>https://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivities</url>
     <connection>scm:git:git://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivities.git</connection>
     <developerConnection>scm:git:git://github.com/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivities.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v1.0.0-RC4</tag>
   </scm>
 
   <modules>
