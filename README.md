@@ -1,2 +1,2 @@
-riv.clinicalprocess.activity.actions.GetAggregatedActivity
-========================================================================
+riv.clinicalprocess.activity.actions.GetAggregatedActivities
+============================================================
