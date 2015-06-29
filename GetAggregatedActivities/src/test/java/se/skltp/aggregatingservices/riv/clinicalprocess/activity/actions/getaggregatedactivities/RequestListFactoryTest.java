@@ -3,8 +3,6 @@ package se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions.getagg
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -64,26 +62,6 @@ public class RequestListFactoryTest {
 
         assertFalse(validRequestList.isEmpty());
         assertTrue(invalidRequestList.isEmpty());
-    }
-
-    @Test
-    public void isPartOf() {
-        List<String> careUnitIdList = Arrays.asList("UNIT1", "UNIT2");
-        assertTrue(new RequestListFactoryImpl().isPartOf(careUnitIdList, "UNIT2"));
-        assertTrue(new RequestListFactoryImpl().isPartOf(careUnitIdList, "UNIT1"));
-
-        careUnitIdList = new ArrayList<String>();
-        assertTrue(new RequestListFactoryImpl().isPartOf(careUnitIdList, "UNIT1"));
-
-        careUnitIdList = null;
-        assertTrue(new RequestListFactoryImpl().isPartOf(careUnitIdList, "UNIT1"));
-    }
-
-    @Test
-    public void isNotPartOf() {
-        List<String> careUnitIdList = Arrays.asList("UNIT1", "UNIT2");
-        assertFalse(new RequestListFactoryImpl().isPartOf(careUnitIdList, "UNIT3"));
-        assertFalse(new RequestListFactoryImpl().isPartOf(careUnitIdList, null));
     }
 
     @Test
