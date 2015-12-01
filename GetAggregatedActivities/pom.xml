@@ -20,10 +20,6 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
   <packaging>mule</packaging>
   <name>GetAggregatedActivities</name>
 
-  <properties>
-    <skltp.agp.version>1.2.3</skltp.agp.version>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>se.skltp.agp</groupId>
@@ -124,7 +120,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
               <artifactId>devkit</artifactId>
             </inclusion>
           </inclusions>
- 
+
           <exclusions>
 
             <!-- xercesImpl is endorsed in MULE_HOME/lib/endorsed, see issue 274 -->
@@ -156,7 +152,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
               <groupId>org.safehaus.jug</groupId>
               <artifactId>jug.osgi</artifactId>
             </exclusion>
-            
+
             <!-- activemq needs to be added manually to MULE_HOME/lib/user if required, see issue 283 -->
             <exclusion>
               <groupId>org.apache.activemq</groupId>
@@ -195,7 +191,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
         <artifactId>maven-jar-plugin</artifactId>
         <configuration>
                 <!--
-                 if no classifier is declared, then a mvn install results in a file in the local repo: 
+                 if no classifier is declared, then a mvn install results in a file in the local repo:
                  ic2-1.0.0-SNAPSHOT.mule, which is a jar-file - only strangely named and with a bad extension
                 -->
           <classifier>core</classifier>
@@ -235,15 +231,15 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
           </execution>
         </executions>
       </plugin>
-      
+
     </plugins>
   </build>
 
   <profiles>
     <profile>
       <id>muleServer</id>
-      <!-- Start mule server with the command 
-             mvn -PmuleServer or 
+      <!-- Start mule server with the command
+             mvn -PmuleServer or
              mvn -PmuleServer -Dexec.args="${artifaceId}-config.xml" if you want to override the default config-file -->
       <build>
         <defaultGoal>test</defaultGoal>
