@@ -1,8 +1,6 @@
 package se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions.getaggregatedactivities;
 
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +9,6 @@ import java.util.Map.Entry;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.soitoolkit.commons.mule.util.ThreadSafeSimpleDateFormat;
 
 import riv.clinicalprocess.activity.actions.getactivitiesresponder.v1.GetActivitiesType;
 import se.skltp.agp.riv.itintegration.engagementindex.findcontentresponder.v1.FindContentResponseType;
@@ -22,7 +19,6 @@ import se.skltp.agp.service.api.RequestListFactory;
 public class RequestListFactoryImpl implements RequestListFactory {
 
     private static final Logger log = LoggerFactory.getLogger(RequestListFactoryImpl.class);
-    private static final ThreadSafeSimpleDateFormat df = new ThreadSafeSimpleDateFormat("YYYYMMDDhhmmss");
 
     /**
      * Filtrera svarsposter från i EI (ei-engagement) baserat parametrar i GetActivities requestet (req). Följande villkor måste vara sanna
@@ -76,50 +72,14 @@ public class RequestListFactoryImpl implements RequestListFactory {
         return reqList;
     }
 
-    Date parseTs(String ts) {
-        try {
-            if (ts == null || ts.length() == 0) {
-                return null;
-            } else {
-                return df.parse(ts);
-            }
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    boolean isBetween(Date from, Date to, String tsStr) {
-        try {
-            if (log.isDebugEnabled()) {
-                log.debug("Is {} between {} and ", new Object[] { tsStr, from, to });
-            }
-
-            Date ts = df.parse(tsStr);
-            if (from != null && from.after(ts))
-                return false;
-            if (to != null && to.before(ts))
-                return false;
-            return true;
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    boolean isPartOf(String careUnitId, String careUnit) {
+    protected boolean isPartOf(String careUnitId, String careUnit) {
         log.debug("Check careunit {} equals expected {}", careUnitId, careUnit);
         if (StringUtils.isBlank(careUnitId))
             return true;
         return careUnitId.equals(careUnit);
     }
 
-    boolean isPartOf(List<String> careUnitIdList, String careUnit) {
-        log.debug("Check presence of {} in {}", careUnit, careUnitIdList);
-        if (careUnitIdList == null || careUnitIdList.size() == 0)
-            return true;
-        return careUnitIdList.contains(careUnit);
-    }
-
-    void addPdlUnitToSourceSystem(Map<String, List<String>> sourceSystem_pdlUnitList_map, String sourceSystem, String pdlUnitId) {
+    private void addPdlUnitToSourceSystem(Map<String, List<String>> sourceSystem_pdlUnitList_map, String sourceSystem, String pdlUnitId) {
         List<String> careUnitList = sourceSystem_pdlUnitList_map.get(sourceSystem);
         if (careUnitList == null) {
             careUnitList = new ArrayList<String>();

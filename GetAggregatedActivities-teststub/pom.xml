@@ -33,12 +33,12 @@
     <dependency>
       <groupId>se.skltp.agp</groupId>
       <artifactId>agp-core</artifactId>
-      <version>1.2.3</version>
+      <version>${skltp.agp.version}</version>
     </dependency>
     <dependency>
       <groupId>se.skltp.agp</groupId>
       <artifactId>agp-test-common</artifactId>
-      <version>1.2.3</version>
+      <version>${skltp.agp.version}</version>
     </dependency>
   </dependencies>
 
@@ -68,9 +68,9 @@
         <groupId>org.mule.tools</groupId>
         <artifactId>maven-mule-plugin</artifactId>
         <extensions>true</extensions>
-        
+
         <configuration>
-        
+
           <inclusions>
             <!-- Include mule-dependencies that doesn't come with Mule 3.x otherwise we can't install to a vanilla Mule 3.x installation -->
             <inclusion>
@@ -82,7 +82,7 @@
               <artifactId>devkit</artifactId>
             </inclusion>
           </inclusions>
-          
+
           <exclusions>
 
             <!-- xercesImpl is endorsed in MULE_HOME/lib/endorsed, see issue 274 -->
@@ -114,7 +114,7 @@
               <groupId>org.safehaus.jug</groupId>
               <artifactId>jug.osgi</artifactId>
             </exclusion>
-            
+
             <!-- activemq needs to be added manually to MULE_HOME/lib/user if required, see issue 283 -->
             <exclusion>
               <groupId>org.apache.activemq</groupId>
@@ -155,9 +155,9 @@
   <profiles>
     <profile>
       <id>muleServer</id>
-			<!-- Start mule server with the command 
+			<!-- Start mule server with the command
                    mvn -PmuleServer
-                     or 
+                     or
                    mvn -PmuleServer -Dexec.args="${artifaceId}-config.xml" if you want to override the default config-file -->
       <build>
         <defaultGoal>test</defaultGoal>
