@@ -55,7 +55,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
               <sourceRoot>${schema.gen.src.dir}</sourceRoot>
               <wsdlOptions>
                 <wsdlOption>
-                  <wsdl>${schema.path}/td_clinicalprocess_activity_actions_1.0_RC5/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl</wsdl>
+                  <wsdl>${schema.path}/td_clinicalprocess_activity_actions_1.0_RC6/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl</wsdl>
                   <extraargs>
                     <extraarg>-validate</extraarg>
                     <extraarg>-p</extraarg>
