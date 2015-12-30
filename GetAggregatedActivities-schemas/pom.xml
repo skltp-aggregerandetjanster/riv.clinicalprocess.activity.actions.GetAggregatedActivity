@@ -11,11 +11,10 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <artifactId>GetAggregatedActivities-parent</artifactId>
-    <version>1.0.1-RC2-SNAPSHOT</version>
     <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
+    <artifactId>GetAggregatedActivities-parent</artifactId>
+    <version>1.1.0-RC1-SNAPSHOT</version>
   </parent>
-
 
   <artifactId>GetAggregatedActivities-schemas</artifactId>
   <packaging>jar</packaging>
@@ -43,7 +42,7 @@ DON'T CHANGE THE CONTENT OF THIS COMMENT UNLESS YOU REALLY KNOW WHAT YOU ARE DOI
         <groupId>org.apache.cxf</groupId>
         <artifactId>cxf-codegen-plugin</artifactId>
         <configuration>
-					<!-- fork to avoid encoding issues, ref: soi-toolkit issue 360 -->
+          <!-- fork to avoid encoding issues, ref: soi-toolkit issue 360 -->
           <fork>once</fork>
           <additionalJvmArgs>-Dfile.encoding=UTF-8</additionalJvmArgs>
         </configuration>
