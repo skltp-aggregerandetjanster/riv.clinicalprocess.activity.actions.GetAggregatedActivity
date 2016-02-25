@@ -18,8 +18,7 @@
  under the License.
  -->		
 <wsdl:definitions name='GetActivitiesInteraction' xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:xs='http://www.w3.org/2001/XMLSchema' xmlns:tjsr='urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1' xmlns:tjsi='urn:riv:clinicalprocess:activity:actions:GetActivitiesInitiator:1' xmlns:tns='urn:riv:clinicalprocess:activity:actions:GetActivities:1:rivtabp21' targetNamespace='urn:riv:clinicalprocess:activity:actions:GetActivities:1:rivtabp21' xmlns:itr='urn:riv:itintegration:registry:1'>
-  <xs:annotation>
-    <xs:documentation>
+    <wsdl:documentation>
 			 Tjänsteinteraktionens namn: GetActivitiesInteraction
 			 Beskrivning: 
 			   Retrieval of activity reports 
@@ -28,8 +27,7 @@
 			 Tjänsteinteraktionstyp: Fråga-Svar
 			 WS-profil: RIVTABP21
 			 Förvaltas av: Sveriges Kommuner och Landsting
-			 </xs:documentation>
-  </xs:annotation>
+			 </wsdl:documentation>
   <wsdl:types>
     <xs:schema targetNamespace='urn:riv:clinicalprocess:activity:actions:GetActivities:1:rivtabp21'>
       <xs:import schemaLocation='GetActivitiesResponder_1.0.xsd' namespace='urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1' />
