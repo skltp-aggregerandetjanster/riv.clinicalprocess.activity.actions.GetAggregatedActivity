@@ -39,6 +39,7 @@
 	    <spring:property name="locations">
 	      <spring:list>
 	        <spring:value>classpath:GetAggregatedActivities-config.properties</spring:value>
+	        <spring:value>classpath:agp-config-override.properties</spring:value>
 	        <spring:value>classpath:GetAggregatedActivities-config-override.properties</spring:value>
 	      </spring:list>
 	    </spring:property>
