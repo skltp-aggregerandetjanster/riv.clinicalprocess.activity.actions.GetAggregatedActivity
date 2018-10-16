@@ -46,7 +46,7 @@ public class ResponseListFactoryImpl implements ResponseListFactory {
             aggregatedResponse.getActivityGroup().addAll(response.getActivityGroup());
         }
 
-        log.info("Returning {} aggregated alert informations for subject of care id {}",
+        log.info("Returning {} aggregated activities for subject of care id {}",
                   aggregatedResponse.getActivityGroup().size(),
                   queryObject.getFindContent().getRegisteredResidentIdentification());
 

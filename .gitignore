@@ -9,3 +9,8 @@ target/
 # MuleStudio
 .studio
 abc.xml
+
+
+# intellij
+.idea
+*.iml
