@@ -8,21 +8,21 @@
 
 # PingForConfiguration
 mvn gatling:execute -PPingForConfiguration -DserviceLowercase=getaggregatedactivities
-mvn gatling:execute -PPingForConfiguration -DbaseUrl=http://ine-dit-app02.sth.basefarm.net:9010/agp/getaggregatedactivities/itintegration/monitoring/PingForConfiguration/1/rivtabp21 -DserviceLowercase=getaggregatedactivities
-mvn gatling:execute -PPingForConfiguration -DbaseUrl=http://ine-tit-app02.sth.basefarm.net:9010/agp/getaggregatedactivities/itintegration/monitoring/PingForConfiguration/1/rivtabp21 -DserviceLowercase=getaggregatedactivities
+mvn gatling:execute -PPingForConfiguration -DbaseUrl=http://ine-tit-app05.sth.basefarm.net:9010/agp/getaggregatedactivities/itintegration/monitoring/PingForConfiguration/1/rivtabp21 -DserviceLowercase=getaggregatedactivities
+mvn gatling:execute -PPingForConfiguration -DbaseUrl=http://ine-tit-app05.sth.basefarm.net:9010/agp/getaggregatedactivities/itintegration/monitoring/PingForConfiguration/1/rivtabp21 -DserviceLowercase=getaggregatedactivities
 mvn gatling:execute -PPingForConfiguration -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9010/agp/getaggregatedactivities/itintegration/monitoring/PingForConfiguration/1/rivtabp21 -DserviceLowercase=getaggregatedactivities
 
 # HappyPath - testDuration in seconds
 mvn gatling:execute -PHappyPath -DtestDuration=7
-mvn gatling:execute -PHappyPath -DbaseUrl=http://ine-tit-app02.sth.basefarm.net:9010/GetAggregatedActivities/service/v3 -DtestDuration=7
-mvn gatling:execute -PHappyPath -DbaseUrl=http://ine-tit-app02.sth.basefarm.net:9010/GetAggregatedActivities/service/v3 -DnumberOfConcurrentUsers=3
-mvn gatling:execute -PHappyPath -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9010/GetAggregatedActivities/service/v3 -DnumberOfConcurrentUsers=45 -DtestDuration=120
+mvn gatling:execute -PHappyPath -DbaseUrl=http://ine-tit-app05.sth.basefarm.net:9010/GetAggregatedActivities/service/v1 -DtestDuration=7
+mvn gatling:execute -PHappyPath -DbaseUrl=http://ine-tit-app05.sth.basefarm.net:9010/GetAggregatedActivities/service/v1 -DnumberOfConcurrentUsers=3
+mvn gatling:execute -PHappyPath -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9010/GetAggregatedActivities/service/v1 -DnumberOfConcurrentUsers=45 -DtestDuration=120
 
 # Patients - testDuration in minutes
 mvn gatling:execute -PPatients -DtestDuration=1
-mvn gatling:execute -PPatients -DbaseUrl=http://ine-tit-app02.sth.basefarm.net:9010/GetAggregatedActivities/service/v3 -DnumberOfConcurrentUsers=4 -DtestDuration=60
-mvn gatling:execute -PPatients -DbaseUrl=http://ine-tit-app02.sth.basefarm.net:9010/GetAggregatedActivities/service/v3 -DpatientsFileName=patients-override.csv
-mvn gatling:execute -PPatients -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9010/GetAggregatedActivities/service/v3 -DtestDuration=720
+mvn gatling:execute -PPatients -DbaseUrl=http://ine-tit-app05.sth.basefarm.net:9010/GetAggregatedActivities/service/v1 -DnumberOfConcurrentUsers=4 -DtestDuration=60
+mvn gatling:execute -PPatients -DbaseUrl=http://ine-tit-app05.sth.basefarm.net:9010/GetAggregatedActivities/service/v1 -DpatientsFileName=patients-override.csv
+mvn gatling:execute -PPatients -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9010/GetAggregatedActivities/service/v1 -DtestDuration=720
 
 -->
 
@@ -37,6 +37,7 @@ mvn gatling:execute -PPatients -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9
     <gatling-maven-plugin.version>2.1.7</gatling-maven-plugin.version>
     <aggregatedService>GetAggregatedActivities</aggregatedService>
     <serviceLowercase>getaggregatedactivities</serviceLowercase>
+    <skltp.agp.test.non.functional.version>2.3.4-RC1</skltp.agp.test.non.functional.version>
   </properties>
 
   <dependencies>
@@ -50,7 +51,7 @@ mvn gatling:execute -PPatients -DbaseUrl=http://ine-sit-app03.sth.basefarm.net:9
     <dependency>
       <groupId>se.skltp.agp</groupId>
       <artifactId>agp-test-non-functional</artifactId>
-      <version>1.4.0</version>
+      <version>${skltp.agp.test.non.functional.version}</version>
       <scope>test</scope>
     </dependency>
 
