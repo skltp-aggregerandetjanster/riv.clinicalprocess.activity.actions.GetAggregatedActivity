@@ -16,9 +16,9 @@ public class ServiceConfiguration extends TestProducerConfiguration {
   public static final String SCHEMA_PATH = "classpath:/schemas/td_clinicalprocess_activity_actions_1.0_RC6/interactions/GetActivitiesInteraction/GetActivitiesInteraction_1.0_RIVTABP21.wsdl";
 
   public ServiceConfiguration() {
-    setProducerAddress("CHANGE_IT");
+    setProducerAddress("http://localhost:8083/vp");
     setServiceClass(GetActivitiesResponderInterface.class.getName());
-    setServiceNamespace("urn:riv:CHANGE_IT");
+    setServiceNamespace("urn:riv:clinicalprocess:activity:actions:GetActivitiesResponder:1");
     setPortName(GetActivitiesResponderService.GetActivitiesResponderPort.toString());
     setWsdlPath(SCHEMA_PATH);
     setTestDataGeneratorClass(ServiceTestDataGenerator.class.getName());
