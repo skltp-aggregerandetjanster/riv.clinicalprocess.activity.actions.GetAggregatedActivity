@@ -22,6 +22,7 @@ public class ServiceConfiguration extends TestProducerConfiguration {
     setPortName(GetActivitiesResponderService.GetActivitiesResponderPort.toString());
     setWsdlPath(SCHEMA_PATH);
     setTestDataGeneratorClass(ServiceTestDataGenerator.class.getName());
+    setServiceTimeout(27000);
   }
 
 }

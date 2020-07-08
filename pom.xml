@@ -6,7 +6,7 @@
   <parent>
     <artifactId>agp-parent</artifactId>
     <groupId>se.skltp.agp</groupId>
-    <version>3.0.0-RC1</version>
+    <version>3.0.0-RC2</version>
   </parent>
 
   	<groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
@@ -16,14 +16,14 @@
     <name>GetAggregatedActivities-v1</name>
 
   <properties>
-    <agp-parent.version>3.0.0-RC1</agp-parent.version>
+    <agp-parent.version>3.0.0-RC2</agp-parent.version>
     <apache-cfx.version>3.2.7</apache-cfx.version>
   </properties>
 
     <scm>
-			<url/>
-			<connection/>
-			<developerConnection/>
+      <url>https://github.com:443/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivities</url>
+      <connection>scm:git:https://github.com:443/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivities.git</connection>
+      <developerConnection>scm:git:https://github.com:443/skltp-aggregerandetjanster/riv.clinicalprocess.activity.actions.GetAggregatedActivities.git</developerConnection>
       <tag>HEAD</tag>
   	</scm>
 
