@@ -19,13 +19,4 @@ public class GAACreateFindContentTest extends CreateFindContentTest {
   public GAACreateFindContentTest() {
     super(testDataGenerator, agpServiceFactory, configuration);
   }
-
-  @BeforeClass
-  public static void before() {
-    configuration = new GAAAgpServiceConfiguration();
-    agpServiceFactory = new GAAAgpServiceFactoryImpl();
-    agpServiceFactory.setAgpServiceConfiguration(configuration);
-  }
-
-
 }
