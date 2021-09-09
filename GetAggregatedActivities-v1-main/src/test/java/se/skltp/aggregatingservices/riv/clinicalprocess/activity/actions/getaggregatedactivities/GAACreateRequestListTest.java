@@ -1,13 +1,13 @@
 package se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions.getaggregatedactivities;
 
-import org.junit.runner.RunWith;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import riv.clinicalprocess.activity.actions.getactivitiesresponder.v1.GetActivitiesResponseType;
 import se.skltp.aggregatingservices.api.AgpServiceFactory;
 import se.skltp.aggregatingservices.tests.CreateRequestListTest;
 
-@RunWith(SpringJUnit4ClassRunner.class)
+
+@ExtendWith(SpringExtension.class)
 public class GAACreateRequestListTest extends CreateRequestListTest {
 
   private static GAAAgpServiceConfiguration configuration = new GAAAgpServiceConfiguration();
