@@ -11,7 +11,7 @@
 
   	<groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
 		<artifactId>GetAggregatedActivities-v1</artifactId>
-		<version>2.0.1-SNAPSHOT</version>
+		<version>2.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GetAggregatedActivities-v1</name>
 
